@@ -246,7 +246,12 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         int state = sharedPreferences.getInt(SAVE_PASSWORD_KEY, SAVE_PASSWORD_STATE_NOTNOW);
 
-        if (state == SAVE_PASSWORD_STATE_NOTNOW) {
+        String prevUsername = sharedPreferences.getString(USERNAME_KEY, "");
+        String prevPassword = sharedPreferences.getString(PASSWORD_KEY, "");
+        boolean blChangedUsername = !prevUsername.equals(m_strCurUserName);
+        boolean blChangedPassword = !prevPassword.equals(m_strCurPassword);
+
+        if (state == SAVE_PASSWORD_STATE_NOTNOW || blChangedUsername || blChangedPassword) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Would you like to save this password for the app?").setPositiveButton("Save", dialogClickListener)
                     .setNegativeButton("Never", dialogClickListener).setNeutralButton("Not Now", dialogClickListener).show();
