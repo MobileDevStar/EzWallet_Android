@@ -19,4 +19,6 @@ Digifli
 
 ## ScreenShots
 
-![alt-text-1](./screenshots/Screenshot_1.png "screenshot1") ![alt-text-2](./screenshots/Screenshot_2.png "screenshot2")
+| Screenshot1  | Screenshot2 |
+| ------------- | ------------- |
+| ![](./screenshots/Screenshot_1.png)  | ![](./screenshots/Screenshot_2.png)  |
