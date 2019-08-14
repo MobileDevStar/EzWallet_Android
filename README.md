@@ -1,5 +1,5 @@
 # EzWallet_Android
-This is an app to load FileMaker WebDirect Page with saving username and password
+This is an app to show wallet pages by FileMaker WebDirect Page
 
 
 ---
